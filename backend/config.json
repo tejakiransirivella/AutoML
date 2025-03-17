@@ -1,0 +1,6 @@
+{
+    "openml_api_key": "7b8854996fc1b361ccee7114426d12b8",
+    "min_rows": 501,
+    "max_rows": 100000,
+    "min_features": 2
+}
