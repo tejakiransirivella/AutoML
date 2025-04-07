@@ -3,3 +3,5 @@ numpy
 pandas
 openml
 matplotlib
+smac
+ConfigSpace

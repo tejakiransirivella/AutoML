@@ -15,3 +15,9 @@ class Config:
     
     def get_min_features(self):
         return self.config["min_features"]
+    
+    def get_train_path(self):
+        return self.config["train_path"]
+    
+    def get_test_path(self):
+        return self.config["test_path"]
