@@ -11,3 +11,14 @@ class BasePipeline:
         model = self.get_model_for_config(config,budget,seed)
         scores = cross_val_score(model, X_train, y_train, cv=5)
         return 1-np.mean(scores)
+    
+    def predict(self, X_train,y_train,X_test, config: Configuration, budget: int, seed:int=0) -> float:
+        """
+        test the model and return the validation score.
+        """
+        model = self.get_model_for_config(config,budget,seed)
+        model.fit(X_train, y_train)
+        predictions = model.predict(X_test)
+        return predictions
+
+        

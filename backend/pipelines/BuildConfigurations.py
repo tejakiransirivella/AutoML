@@ -10,9 +10,9 @@ from backend.pipelines.SgdPipeline import SgdPipeline
 
 class BuildConfigurations:
 
-    def __init__(self):
+    def __init__(self,pipeline_registry:PipelineRegistry = None):
         self.configspace:ConfigurationSpace = ConfigurationSpace(name="automl_configspace")
-        self.pipeline_registry = PipelineRegistry()
+        self.pipeline_registry = pipeline_registry
 
     def register_pipelines(self):
         self.pipeline_registry.register_pipeline("ExtraTrees", ExtraTreesPipeline())
@@ -24,8 +24,7 @@ class BuildConfigurations:
 
     def build_configurations(self):
         # Define the configuration space for the pipeline
-        algorithms = ["ExtraTrees", "HistGradientBoosting","MLP","PassiveAggressive",
-                      "RandomForest","Sgd"]
+        algorithms = ["ExtraTrees", "HistGradientBoosting","MLP","PassiveAggressive","RandomForest","Sgd"]
         algorithm = Categorical("algorithm", algorithms)
         self.configspace.add(algorithm)
 

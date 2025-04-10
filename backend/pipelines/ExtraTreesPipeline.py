@@ -4,24 +4,29 @@ from backend.pipelines.BasePipeline import BasePipeline
 import backend.pipelines.util as util
 
 class ExtraTreesPipeline(BasePipeline):
+
+    def __init__(self):
+        super().__init__()
+        self.name = "ExtraTrees"
+
     def config_space(self,configspace:ConfigurationSpace):
-        bootstrap = Categorical("et.bootstrap", [True, False], default=False)
-        criterion = Categorical("et.criterion", ["gini", "entropy"],default="gini")
-        max_features = Float("et.max_features", (0, 1), default=0.5)
-        min_samples_leaf = Integer("et.min_samples_leaf", (1, 20),default=1) 
-        min_samples_split = Integer("et.min_samples_split", (2, 20),default=2)
+        bootstrap = Categorical(f"{self.name}.bootstrap", [True, False], default=False)
+        criterion = Categorical(f"{self.name}.criterion", ["gini", "entropy"],default="gini")
+        max_features = Float(f"{self.name}.max_features", (0, 1), default=0.5)
+        min_samples_leaf = Integer(f"{self.name}.min_samples_leaf", (1, 20),default=1) 
+        min_samples_split = Integer(f"{self.name}.min_samples_split", (2, 20),default=2)
 
         hyperparameters = [bootstrap, criterion, max_features, min_samples_leaf, min_samples_split]
 
         configspace.add(hyperparameters)
 
         for param in hyperparameters:
-            configspace.add(EqualsCondition(param, configspace.get("algorithm"), "ExtraTrees")) 
+            configspace.add(EqualsCondition(param, configspace.get("algorithm"), self.name)) 
         
     
     def get_model_for_config(self, config: Configuration,budget:int,seed:int):
         
-        config = util.get_config_for_model("et",config)
+        config = util.get_config_for_model(self.name,config)
         model = ExtraTreesClassifier(**config,n_estimators=budget,random_state=seed)
         return model
         
