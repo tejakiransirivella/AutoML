@@ -53,12 +53,12 @@ def main():
     df = preprocess.load_dataset(31)
     y = df["class"]
     X = df.drop(columns=["class"])
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     autoclassifier = AutoClassifier(seed=42,walltime_limit=60,min_budget = 100, max_budget = 1000)
+    X,y = autoclassifier.one_hot_encoding(X,y)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     autoclassifier.fit(X_train,y_train)
-    X_test,y_test = autoclassifier.one_hot_encoding(X_test,y_test)
     y_pred = autoclassifier.predict(X_test)
-    accuracy = accuracy_score(y_test, y_pred)
+    accuracy = accuracy_score(y_test ,y_pred)
     print(accuracy)
 
 main()
