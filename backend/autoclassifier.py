@@ -1,6 +1,7 @@
 import pandas as pd
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
+from smac.runhistory import RunHistory
 
 from backend.Optimizer import Optimizer
 from backend.meta_learning import preprocess
@@ -23,6 +24,7 @@ class AutoClassifier:
         self.pipeline_registry = PipelineRegistry()
         self.X_train = None
         self.y_train = None
+        self.val_score = None
        
 
     def one_hot_encoding(self,X_train, y_train):
@@ -35,8 +37,9 @@ class AutoClassifier:
        
         self.X_train, self.y_train = self.one_hot_encoding(X_train, y_train)
         self.optimizer = Optimizer(self.X_train,self.y_train,self.pipeline_registry)
-        self.best_config = self.optimizer.optimize(self.kwargs)
-        print(self.best_config)
+        results = self.optimizer.optimize(self.kwargs)
+        self.best_config = results[0]
+        self.val_score = results[1]
     
     def predict(self,X_test):
         if self.best_config is None:
@@ -53,13 +56,15 @@ def main():
     df = preprocess.load_dataset(31)
     y = df["class"]
     X = df.drop(columns=["class"])
-    autoclassifier = AutoClassifier(seed=42,walltime_limit=60,min_budget = 100, max_budget = 1000)
+    autoclassifier = AutoClassifier(seed=42,walltime_limit=60,min_budget = 10, max_budget = 1000)
     X,y = autoclassifier.one_hot_encoding(X,y)
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     autoclassifier.fit(X_train,y_train)
-    y_pred = autoclassifier.predict(X_test)
-    accuracy = accuracy_score(y_test ,y_pred)
-    print(accuracy)
+    # y_pred = autoclassifier.predict(X_test)
+    # accuracy = accuracy_score(y_test ,y_pred)
+    # print(accuracy)
+    print(autoclassifier.best_config)
+    print(autoclassifier.val_score)
 
 main()
 

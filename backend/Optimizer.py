@@ -24,7 +24,8 @@ class Optimizer:
                              deterministic=True,output_directory="smac_output")
         smac = MultiFidelityFacade(scenario=scenario,target_function=self.train)
         best_config = smac.optimize()
-        return best_config
+        val_score = 1.0-smac.runhistory.get_cost(best_config)
+        return (best_config,val_score)
         
 
         

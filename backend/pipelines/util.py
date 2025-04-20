@@ -14,7 +14,7 @@ def get_config_for_model(model_name:str,config: Configuration):
                 res[new_key] = False
     
     for key,value in res.items():
-        if isinstance(value,(np.generic,np.bool)):
+        if isinstance(value,(np.generic,np.bool_)):
             res[key] = value.item()
             
     # print(res)
