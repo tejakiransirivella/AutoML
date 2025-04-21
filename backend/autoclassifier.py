@@ -66,6 +66,7 @@ def main():
     print(autoclassifier.best_config)
     print(autoclassifier.val_score)
 
-main()
+if __name__ == "__main__":
+    main()
 
           

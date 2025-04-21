@@ -122,8 +122,12 @@ def test():
     #     for feature in dataset.features.values():
     #         features_types.add(feature.data_type)
     # print(features_types)
-    # dataset = openml.datasets.get_dataset(1468)
-    # X,y,_,_ = dataset.get_data(dataset_format="dataframe")
+    dataset = openml.datasets.get_dataset(23517)
+    print(dataset.name)
+    X,_,_,_ = dataset.get_data(dataset_format="dataframe")
+    y = X.iloc[:,-1]
+    X = X.iloc[:,:-1]
+    print(X.dtypes)
     # X_numeric = X.select_dtypes(exclude=["category", "object"])
     # zeroes = (X_numeric == 0).sum().sum()
     # print(zeroes)
@@ -132,12 +136,12 @@ def test():
     #     dataset = openml.datasets.get_dataset(dataset_id)
     #     check_missing_values(dataset)
 
-    dataset = openml.datasets.get_dataset(1053)
-    impute_missing_values(dataset)
+    # dataset = openml.datasets.get_dataset(1053)
+    # impute_missing_values(dataset)
 
 
 if __name__ == "__main__":
-    collect_datasets()
-    # test()
+    # collect_datasets()
+    test()
 
 

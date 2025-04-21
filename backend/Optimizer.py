@@ -3,6 +3,7 @@ from smac import MultiFidelityFacade
 from smac import Scenario
 from ConfigSpace import Configuration
 from backend.pipelines.PipelineRegistry import PipelineRegistry
+import uuid
 
 class Optimizer:
 
@@ -19,9 +20,8 @@ class Optimizer:
         return pipeline.train(self.X_train, self.y_train, config, int(budget),seed)
     
     def optimize(self, kwargs) -> Configuration:
-        
         scenario  = Scenario(configspace=self.configspace, **kwargs,
-                             deterministic=True,output_directory="smac_output")
+                             deterministic=True,output_directory=f"smac_output/{uuid.uuid4().hex}")
         smac = MultiFidelityFacade(scenario=scenario,target_function=self.train)
         best_config = smac.optimize()
         val_score = 1.0-smac.runhistory.get_cost(best_config)
