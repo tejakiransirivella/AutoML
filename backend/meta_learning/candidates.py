@@ -20,8 +20,7 @@ class CandidatePipeline:
 
     def write_to_file(self, best_candidate_runs, filename):
         with open(filename, "w") as f:
-            for run in best_candidate_runs:
-                json.dump(run.__dict__,f,indent=4)
+            json.dump({"best_candidates":[run.__dict__ for run in best_candidate_runs]},f,indent=4, default=str)
             
 
     @staticmethod
@@ -33,13 +32,14 @@ class CandidatePipeline:
         autoclassifier.fit(X_train,y_train)
         y_pred = autoclassifier.predict(X_test)
         test_accuracy = accuracy_score(y_test ,y_pred)
-        best_candidate_run = BestCandidateRun(dataset_id=dataset_id, best_config=autoclassifier.best_config, 
+        best_candidate_run = BestCandidateRun(dataset_id=dataset_id, best_config=dict(autoclassifier.best_config), 
                                               val_score=autoclassifier.val_score, test_score=test_accuracy)
         return best_candidate_run
     
     def find_best_candidate(self):
         tasks = []
-        autoclassifier = AutoClassifier(seed=42, walltime_limit=60, min_budget=10, max_budget=1000)
+        # self.dataset_ids = self.dataset_ids[:2]
+        autoclassifier = AutoClassifier(seed=42, walltime_limit=1800, min_budget=10, max_budget=1000)
         for dataset_id in self.dataset_ids:
             dataset = preprocess.load_dataset(dataset_id)
             print("dataset id : ", dataset_id)
