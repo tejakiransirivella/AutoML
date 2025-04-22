@@ -16,3 +16,10 @@ export pythonpath:
 
 export PYTHONPATH="/home/ts7244/capstone/AutoML/:$PYTHONPATH"
 
+generate keys on head node:
+-------------------------
+ssh-keygen
+
+copy public key to remote workers:
+--------------------------------
+ssh-copy-id username@remote_ip_address
