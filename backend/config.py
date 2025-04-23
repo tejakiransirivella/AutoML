@@ -1,8 +1,12 @@
 import json
+import pathlib
 
 class Config:
     def __init__(self):
        self.config =  json.load(open("backend/config.json"))
+       self.path = pathlib.Path(__file__).resolve().parents[1]
+       self.config["train_path"] = str(self.path) + "/" + "data" + "/" + "train"
+       self.config["test_path"] = str(self.path) + "/" + "data" + "/" + "test"
 
     def get_openml_api_key(self):
         return self.config["openml_api_key"]
