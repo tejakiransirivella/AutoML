@@ -13,7 +13,6 @@ ssh -L 8265:localhost:8265 ts7244@granger.cs.rit.edu
 
 export pythonpath:
 -----------------
-
 export PYTHONPATH="/home/ts7244/capstone/AutoML/:$PYTHONPATH"
 
 generate keys on head node:
@@ -23,3 +22,7 @@ ssh-keygen
 copy public key to remote workers:
 --------------------------------
 ssh-copy-id username@remote_ip_address
+
+run task in background:
+----------------------
+nohup python3 candidates.py > output.log 2>&1 &
