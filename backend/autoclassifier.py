@@ -1,12 +1,13 @@
 import pandas as pd
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
-from smac.runhistory import RunHistory
 from sklearn.preprocessing import MinMaxScaler
+import openml
 
 from backend.Optimizer import Optimizer
-from backend.meta_learning import preprocess
 from backend.pipelines.PipelineRegistry import PipelineRegistry
+from backend.config import Config
+from backend.meta_learning.preprocess import Preprocess
 
 
 class AutoClassifier:
@@ -53,19 +54,25 @@ class AutoClassifier:
         
     
 def main():
-    df = preprocess.load_dataset(31)
-    y = df["class"]
-    X = df.drop(columns=["class"])
-    autoclassifier = AutoClassifier(seed=42,walltime_limit=10,min_budget = 10, max_budget = 1000)
+    config = Config()
+    preprocess = Preprocess(config.get_test_path())
+    df = preprocess.load_dataset("41146")
+    target = openml.datasets.get_dataset(41146).default_target_attribute
+    y = df[target]
+    X = df.drop(columns=[target])
+    # print(y.columns)
+    autoclassifier = AutoClassifier(seed=42,walltime_limit=60,min_budget = 10, max_budget = 500)
     X,y = autoclassifier.one_hot_encoding(X,y)
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     autoclassifier.fit(X_train,y_train)
-    # y_pred = autoclassifier.predict(X_test)
-    # accuracy = accuracy_score(y_test ,y_pred)
-    # print(accuracy)
-    print(dict(autoclassifier.best_config))
     print(autoclassifier.best_config)
     print(autoclassifier.val_score)
+    print("Starting prediction")
+    y_pred = autoclassifier.predict(X_test)
+    accuracy = accuracy_score(y_test ,y_pred)
+    print(accuracy)
+    print(dict(autoclassifier.best_config))
+
 
 if __name__ == "__main__":
     main()
