@@ -1,3 +1,4 @@
+import numpy as np
 import openml
 from sklearn.impute import SimpleImputer
 from backend.config import Config
@@ -24,6 +25,7 @@ class Preprocess:
 
     def impute_missing_values(self,dataset:openml.OpenMLDataset):
         X,_,_,_ = dataset.get_data(dataset_format="dataframe")
+        X.replace(['NaN', 'nan', 'null', 'None', 'missing', ''], np.nan, inplace=True)
         print("Before imputation:" , dataset.dataset_id)
 
         # handle boolean columns
@@ -51,7 +53,7 @@ class Preprocess:
         return X
         
     def check_missing_values(self,dataset:openml.OpenMLDataset):
-        return dataset.qualities["PercentageOfMissingValues"] > 0
+        return True
     
     def is_string_time_object(self,dataset:openml.OpenMLDataset):
         for feature in dataset.features.values():
@@ -121,8 +123,9 @@ class Preprocess:
 
 
 def test():
-    preprocess = Preprocess("/home/stu11/s15/ts7244/capstone/AutoML/data/temp")
-    preprocess.collect_datasets()
+    preprocess = Preprocess("/home/stu11/s15/ts7244/capstone/AutoML/data/test")
+    # preprocess.collect_datasets()
+   
     # suite = openml.study.get_suite("OpenML-CC18")
     # features_types = set()
     # dataset_ids = suite.data
@@ -131,7 +134,15 @@ def test():
     #     for feature in dataset.features.values():
     #         features_types.add(feature.data_type)
     # print(features_types)
-    # dataset = openml.datasets.get_dataset(40927)
+    dataset = openml.datasets.get_dataset(41147)
+    # print( dataset.qualities["PercentageOfMissingValues"] > 0)
+    # X = preprocess.load_dataset(41147)
+    # X.replace(['NaN', 'nan', 'null', 'None', 'missing', ''], np.nan, inplace=True)
+    # print(X.head())
+    # print(X.isnull().values.any())
+    X = preprocess.impute_missing_values(dataset)
+   
+    preprocess.save_dataset(X, 41147)
     # print(dataset.name)
     # X = preprocess.load_dataset(40927)
     
