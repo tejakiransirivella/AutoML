@@ -1,6 +1,7 @@
 from backend.pipelines.BuildConfigurations import BuildConfigurations
 from smac import MultiFidelityFacade
 from smac import Scenario
+from smac.intensifier.successive_halving import SuccessiveHalving
 from ConfigSpace import Configuration
 from backend.pipelines.PipelineRegistry import PipelineRegistry
 import uuid
@@ -22,7 +23,9 @@ class Optimizer:
     def optimize(self, kwargs) -> Configuration:
         scenario  = Scenario(configspace=self.configspace, **kwargs,
                              deterministic=True,output_directory=f"smac_output/{uuid.uuid4().hex}")
-        smac = MultiFidelityFacade(scenario=scenario,target_function=self.train)
+        
+        intensifier = SuccessiveHalving(scenario=scenario, eta=4)
+        smac = MultiFidelityFacade(scenario=scenario,target_function=self.train,intensifier=intensifier)
         best_config = smac.optimize()
         val_score = 1.0-smac.runhistory.get_cost(best_config)
         return (best_config,val_score)
