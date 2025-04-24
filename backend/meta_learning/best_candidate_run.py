@@ -1,6 +1,6 @@
 class BestCandidateRun:
 
-    def __init__(self,dataset_id:int, best_config:dict, val_score:float,test_score:float):
+    def __init__(self,dataset_id:int=None, best_config:dict=None, val_score:float=None,test_score:float=None):
         self.dataset_id = dataset_id
         self.best_config = best_config
         self.val_score = val_score
