@@ -50,11 +50,11 @@ class CandidatePipeline:
     
     def find_best_candidate(self):
         tasks = []
-        autoclassifier = AutoClassifier(seed=42, walltime_limit=60, min_budget=10, max_budget=500)
         # self.dataset_ids = self.dataset_ids[0:1]
         for dataset_id in self.dataset_ids:
             dataset = self.preprocess.load_dataset(dataset_id)
             target = openml.datasets.get_dataset(dataset_id).default_target_attribute
+            print("dataset id : ", dataset_id, "target: ", target)
             y = dataset[target]
             X = dataset.drop(columns=[target])
 
@@ -64,13 +64,21 @@ class CandidatePipeline:
         best_candidate_runs = []
         futures = []
         for task in tasks:
+            autoclassifier = AutoClassifier(seed=42, walltime_limit=600, min_budget=10, max_budget=500)
             future =  CandidatePipeline.process_task.remote(task, autoclassifier)
             futures.append(future)
         
-        try:
-            best_candidate_runs = ray.get(futures)
-        except ray.exceptions.RayTaskError as e:
-            print("Error in task execution: ", e)
+        for future in futures:
+            try:
+                best_candidate_run = ray.get(future)
+                if best_candidate_run is not None:
+                    best_candidate_runs.append(best_candidate_run)
+            except ray.exceptions.RayTaskError as e:
+                print("Error in task execution: ", e)
+            except Exception as e:
+                print(f"Other Error: {e}")
+                
+        print(f"Successfully collected {len(best_candidate_runs)} runs out of {len(futures)} datasets.")
         self.write_to_file(best_candidate_runs, self.filename)
 
     def collect_dataset_ids(self):
