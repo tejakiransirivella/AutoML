@@ -5,4 +5,6 @@ openml
 matplotlib
 smac
 ConfigSpace
-ray
+ray[default]
+aiohttp=0.7.0
+matplotlib
