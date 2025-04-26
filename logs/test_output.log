@@ -1,0 +1,263 @@
+nohup: ignoring input
+2025-04-24 22:45:53,376	INFO worker.py:1567 -- Connecting to existing Ray cluster at address: 129.21.30.64:6379...
+2025-04-24 22:45:53,386	INFO worker.py:1743 -- Connected to Ray cluster. View the dashboard at [1m[32mhttp://129.21.30.64:8265 [39m[22m
+[36m(process_task pid=608012, ip=129.21.37.49)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/linear_model/_stochastic_gradient.py:713: ConvergenceWarning: Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.
+[36m(process_task pid=608012, ip=129.21.37.49)[0m   warnings.warn(
+[36m(process_task pid=608012, ip=129.21.37.49)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/linear_model/_stochastic_gradient.py:713: ConvergenceWarning: Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.
+[36m(process_task pid=608012, ip=129.21.37.49)[0m   warnings.warn(
+[36m(process_task pid=608012, ip=129.21.37.49)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/linear_model/_stochastic_gradient.py:713: ConvergenceWarning: Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.
+[36m(process_task pid=608012, ip=129.21.37.49)[0m   warnings.warn(
+[36m(process_task pid=608012, ip=129.21.37.49)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/linear_model/_stochastic_gradient.py:713: ConvergenceWarning: Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.
+[36m(process_task pid=608012, ip=129.21.37.49)[0m   warnings.warn(
+[36m(process_task pid=608012, ip=129.21.37.49)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/linear_model/_stochastic_gradient.py:713: ConvergenceWarning: Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.
+[36m(process_task pid=608012, ip=129.21.37.49)[0m   warnings.warn(
+[36m(process_task pid=608010, ip=129.21.37.49)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/neural_network/_multilayer_perceptron.py:691: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (31) reached and the optimization hasn't converged yet.
+[36m(process_task pid=608010, ip=129.21.37.49)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/linear_model/_stochastic_gradient.py:713: ConvergenceWarning: Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.[32m [repeated 10x across cluster][0m
+[36m(process_task pid=608010, ip=129.21.37.49)[0m   warnings.warn([32m [repeated 60x across cluster][0m
+[36m(process_task pid=2327746, ip=129.21.30.37)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/neural_network/_multilayer_perceptron.py:691: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (31) reached and the optimization hasn't converged yet.[32m [repeated 52x across cluster][0m
+[36m(process_task pid=2327736, ip=129.21.30.37)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/linear_model/_stochastic_gradient.py:713: ConvergenceWarning: Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.[32m [repeated 49x across cluster][0m
+[36m(process_task pid=2327736, ip=129.21.30.37)[0m   warnings.warn([32m [repeated 111x across cluster][0m
+[36m(process_task pid=2080673)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/neural_network/_multilayer_perceptron.py:691: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (31) reached and the optimization hasn't converged yet.[32m [repeated 63x across cluster][0m
+[36m(process_task pid=608010, ip=129.21.37.49)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/linear_model/_stochastic_gradient.py:713: ConvergenceWarning: Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.[32m [repeated 22x across cluster][0m
+[36m(process_task pid=2080645)[0m   warnings.warn([32m [repeated 61x across cluster][0m
+[36m(process_task pid=2080751)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/neural_network/_multilayer_perceptron.py:691: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (31) reached and the optimization hasn't converged yet.[32m [repeated 42x across cluster][0m
+[36m(process_task pid=2080673)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/linear_model/_stochastic_gradient.py:713: ConvergenceWarning: Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.[32m [repeated 8x across cluster][0m
+[36m(process_task pid=2327736, ip=129.21.30.37)[0m   warnings.warn([32m [repeated 42x across cluster][0m
+[36m(process_task pid=2080571)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/neural_network/_multilayer_perceptron.py:691: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (31) reached and the optimization hasn't converged yet.[32m [repeated 34x across cluster][0m
+[36m(process_task pid=2080673)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/linear_model/_stochastic_gradient.py:713: ConvergenceWarning: Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.[32m [repeated 10x across cluster][0m
+[36m(process_task pid=2080638)[0m   warnings.warn([32m [repeated 34x across cluster][0m
+[36m(process_task pid=2080678)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/neural_network/_multilayer_perceptron.py:691: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (31) reached and the optimization hasn't converged yet.[32m [repeated 21x across cluster][0m
+[36m(process_task pid=2327746, ip=129.21.30.37)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/linear_model/_stochastic_gradient.py:713: ConvergenceWarning: Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.[32m [repeated 30x across cluster][0m
+[36m(process_task pid=2080753)[0m   warnings.warn([32m [repeated 62x across cluster][0m
+[36m(process_task pid=2080721)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/neural_network/_multilayer_perceptron.py:691: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (31) reached and the optimization hasn't converged yet.[32m [repeated 36x across cluster][0m
+[36m(process_task pid=2327736, ip=129.21.30.37)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/linear_model/_stochastic_gradient.py:713: ConvergenceWarning: Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.[32m [repeated 25x across cluster][0m
+[36m(process_task pid=2080662)[0m   warnings.warn([32m [repeated 44x across cluster][0m
+[36m(process_task pid=2080721)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/neural_network/_multilayer_perceptron.py:691: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (31) reached and the optimization hasn't converged yet.[32m [repeated 22x across cluster][0m
+[36m(process_task pid=608012, ip=129.21.37.49)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/linear_model/_stochastic_gradient.py:713: ConvergenceWarning: Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.[32m [repeated 35x across cluster][0m
+[36m(process_task pid=1910847)[0m   warnings.warn([32m [repeated 56x across cluster][0m
+[36m(process_task pid=2080571)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/neural_network/_multilayer_perceptron.py:691: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (31) reached and the optimization hasn't converged yet.[32m [repeated 15x across cluster][0m
+[36m(process_task pid=2080678)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/linear_model/_stochastic_gradient.py:713: ConvergenceWarning: Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.[32m [repeated 16x across cluster][0m
+[36m(process_task pid=2080705)[0m   warnings.warn([32m [repeated 27x across cluster][0m
+[36m(process_task pid=2080609)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/neural_network/_multilayer_perceptron.py:691: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (31) reached and the optimization hasn't converged yet.[32m [repeated 8x across cluster][0m
+[36m(process_task pid=2080687)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/linear_model/_stochastic_gradient.py:713: ConvergenceWarning: Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.[32m [repeated 16x across cluster][0m
+[36m(process_task pid=2080687)[0m   warnings.warn([32m [repeated 21x across cluster][0m
+[36m(process_task pid=1910847)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/neural_network/_multilayer_perceptron.py:691: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (125) reached and the optimization hasn't converged yet.[32m [repeated 12x across cluster][0m
+[36m(process_task pid=2327746, ip=129.21.30.37)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/linear_model/_stochastic_gradient.py:713: ConvergenceWarning: Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.[32m [repeated 13x across cluster][0m
+[36m(process_task pid=2080751)[0m   warnings.warn([32m [repeated 27x across cluster][0m
+[36m(process_task pid=2080609)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/neural_network/_multilayer_perceptron.py:691: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (31) reached and the optimization hasn't converged yet.[32m [repeated 12x across cluster][0m
+[36m(process_task pid=2327736, ip=129.21.30.37)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/linear_model/_stochastic_gradient.py:713: ConvergenceWarning: Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.[32m [repeated 6x across cluster][0m
+[36m(process_task pid=1910847)[0m   warnings.warn([32m [repeated 15x across cluster][0m
+[36m(process_task pid=2080638)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/neural_network/_multilayer_perceptron.py:691: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (31) reached and the optimization hasn't converged yet.[32m [repeated 8x across cluster][0m
+[36m(process_task pid=2080571)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/linear_model/_stochastic_gradient.py:713: ConvergenceWarning: Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.[32m [repeated 5x across cluster][0m
+[36m(process_task pid=2080638)[0m   warnings.warn([32m [repeated 11x across cluster][0m
+[36m(process_task pid=2080638)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/neural_network/_multilayer_perceptron.py:691: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (31) reached and the optimization hasn't converged yet.[32m [repeated 2x across cluster][0m
+[36m(process_task pid=2080687)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/linear_model/_stochastic_gradient.py:713: ConvergenceWarning: Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.
+[36m(process_task pid=2080638)[0m   warnings.warn([32m [repeated 3x across cluster][0m
+[36m(process_task pid=2080638)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/neural_network/_multilayer_perceptron.py:691: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (31) reached and the optimization hasn't converged yet.[32m [repeated 3x across cluster][0m
+[36m(process_task pid=2080638)[0m   warnings.warn([32m [repeated 3x across cluster][0m
+[36m(process_task pid=2080753)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/neural_network/_multilayer_perceptron.py:691: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (31) reached and the optimization hasn't converged yet.[32m [repeated 2x across cluster][0m
+[36m(process_task pid=2080753)[0m   warnings.warn([32m [repeated 2x across cluster][0m
+[36m(process_task pid=2080753)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/neural_network/_multilayer_perceptron.py:691: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (31) reached and the optimization hasn't converged yet.[32m [repeated 2x across cluster][0m
+[36m(process_task pid=2080753)[0m   warnings.warn([32m [repeated 2x across cluster][0m
+[36m(process_task pid=2080753)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/neural_network/_multilayer_perceptron.py:691: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (31) reached and the optimization hasn't converged yet.
+[36m(process_task pid=2080753)[0m   warnings.warn(
+[36m(process_task pid=2080753)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/neural_network/_multilayer_perceptron.py:691: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (31) reached and the optimization hasn't converged yet.
+[36m(process_task pid=2080753)[0m   warnings.warn(
+[36m(process_task pid=2080595)[0m /home/stu11/s15/ts7244/capstone/AutoML/automlvenv/lib/python3.8/site-packages/sklearn/linear_model/_stochastic_gradient.py:713: ConvergenceWarning: Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.
+no of tasks:  31
+[36m(process_task pid=608012, ip=129.21.37.49)[0m dataset id :  40975
+[36m(process_task pid=608012, ip=129.21.37.49)[0m [INFO][abstract_initial_design.py:87] Reducing the number of initial configurations from 380 to 25 (max_ratio == 0.25).
+[36m(process_task pid=608012, ip=129.21.37.49)[0m [WARNING][target_function_runner.py:74] The argument instance is not set by SMAC: Consider removing it from the target function.
+[36m(process_task pid=608010, ip=129.21.37.49)[0m [INFO][abstract_initial_design.py:139] Using 25 initial design configurations and 0 additional configurations.
+[36m(process_task pid=608012, ip=129.21.37.49)[0m [INFO][abstract_intensifier.py:307] Using only one seed for deterministic scenario.
+[36m(process_task pid=608012, ip=129.21.37.49)[0m [INFO][successive_halving.py:164] Successive Halving uses budget type BUDGETS with eta 4, min budget 10, and max budget 500.
+[36m(process_task pid=608012, ip=129.21.37.49)[0m [INFO][successive_halving.py:323] Number of configs in stage:
+[36m(process_task pid=608012, ip=129.21.37.49)[0m [INFO][successive_halving.py:325] --- Bracket 0: [16, 4, 1]
+[36m(process_task pid=608012, ip=129.21.37.49)[0m [INFO][successive_halving.py:327] Budgets in stage:
+[36m(process_task pid=608012, ip=129.21.37.49)[0m [INFO][successive_halving.py:329] --- Bracket 0: [31.25, 125.0, 500.0]
+[36m(process_task pid=608012, ip=129.21.37.49)[0m [INFO][abstract_intensifier.py:517] Added config e9cd0e as new incumbent because there are no incumbents yet.
+[36m(process_task pid=608010, ip=129.21.37.49)[0m [INFO][abstract_intensifier.py:596] Added config 6c5756 and rejected config e9cd0e as incumbent because it is not better than the incumbents on 1 instances: 
+[36m(process_task pid=1910847)[0m dataset id :  1067[32m [repeated 4x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(process_task pid=2327736, ip=129.21.30.37)[0m [INFO][abstract_initial_design.py:87] Reducing the number of initial configurations from 380 to 25 (max_ratio == 0.25).[32m [repeated 3x across cluster][0m
+[36m(process_task pid=2327736, ip=129.21.30.37)[0m [WARNING][target_function_runner.py:74] The argument instance is not set by SMAC: Consider removing it from the target function.[32m [repeated 3x across cluster][0m
+[36m(process_task pid=2327736, ip=129.21.30.37)[0m [INFO][abstract_initial_design.py:139] Using 25 initial design configurations and 0 additional configurations.[32m [repeated 3x across cluster][0m
+[36m(process_task pid=2327736, ip=129.21.30.37)[0m [INFO][abstract_intensifier.py:307] Using only one seed for deterministic scenario.[32m [repeated 3x across cluster][0m
+[36m(process_task pid=2327736, ip=129.21.30.37)[0m [INFO][successive_halving.py:164] Successive Halving uses budget type BUDGETS with eta 4, min budget 10, and max budget 500.[32m [repeated 3x across cluster][0m
+[36m(process_task pid=2327736, ip=129.21.30.37)[0m [INFO][successive_halving.py:323] Number of configs in stage:[32m [repeated 3x across cluster][0m
+[36m(process_task pid=2327736, ip=129.21.30.37)[0m [INFO][successive_halving.py:329] --- Bracket 0: [31.25, 125.0, 500.0][32m [repeated 6x across cluster][0m
+[36m(process_task pid=2327736, ip=129.21.30.37)[0m [INFO][successive_halving.py:327] Budgets in stage:[32m [repeated 3x across cluster][0m
+[36m(process_task pid=2327736, ip=129.21.30.37)[0m [INFO][abstract_intensifier.py:517] Added config e9cd0e as new incumbent because there are no incumbents yet.[32m [repeated 3x across cluster][0m
+[36m(process_task pid=2327746, ip=129.21.30.37)[0m [INFO][abstract_intensifier.py:596] Added config 210c3a and rejected config 19528c as incumbent because it is not better than the incumbents on 1 instances: [32m [repeated 7x across cluster][0m
+[36m(process_task pid=2080705)[0m dataset id :  1461[32m [repeated 26x across cluster][0m
+[36m(process_task pid=2080691)[0m [INFO][abstract_initial_design.py:87] Reducing the number of initial configurations from 380 to 25 (max_ratio == 0.25).[32m [repeated 21x across cluster][0m
+[36m(process_task pid=2080691)[0m [WARNING][target_function_runner.py:74] The argument instance is not set by SMAC: Consider removing it from the target function.[32m [repeated 21x across cluster][0m
+[36m(process_task pid=2080691)[0m [INFO][abstract_initial_design.py:139] Using 25 initial design configurations and 0 additional configurations.[32m [repeated 21x across cluster][0m
+[36m(process_task pid=2080691)[0m [INFO][abstract_intensifier.py:307] Using only one seed for deterministic scenario.[32m [repeated 21x across cluster][0m
+[36m(process_task pid=2080691)[0m [INFO][successive_halving.py:164] Successive Halving uses budget type BUDGETS with eta 4, min budget 10, and max budget 500.[32m [repeated 21x across cluster][0m
+[36m(process_task pid=2080691)[0m [INFO][successive_halving.py:323] Number of configs in stage:[32m [repeated 21x across cluster][0m
+[36m(process_task pid=2080691)[0m [INFO][successive_halving.py:329] --- Bracket 0: [31.25, 125.0, 500.0][32m [repeated 42x across cluster][0m
+[36m(process_task pid=2080691)[0m [INFO][successive_halving.py:327] Budgets in stage:[32m [repeated 21x across cluster][0m
+[36m(process_task pid=2080735)[0m [INFO][abstract_intensifier.py:517] Added config e9cd0e as new incumbent because there are no incumbents yet.[32m [repeated 17x across cluster][0m
+[36m(process_task pid=608012, ip=129.21.37.49)[0m [INFO][abstract_intensifier.py:596] Added config d2c140 and rejected config 3497f9 as incumbent because it is not better than the incumbents on 1 instances: [32m [repeated 14x across cluster][0m
+[36m(process_task pid=2080624)[0m [INFO][abstract_initial_design.py:87] Reducing the number of initial configurations from 380 to 25 (max_ratio == 0.25).[32m [repeated 3x across cluster][0m
+[36m(process_task pid=2080624)[0m [WARNING][target_function_runner.py:74] The argument instance is not set by SMAC: Consider removing it from the target function.[32m [repeated 3x across cluster][0m
+[36m(process_task pid=2080624)[0m [INFO][abstract_initial_design.py:139] Using 25 initial design configurations and 0 additional configurations.[32m [repeated 3x across cluster][0m
+[36m(process_task pid=2080624)[0m [INFO][abstract_intensifier.py:307] Using only one seed for deterministic scenario.[32m [repeated 3x across cluster][0m
+[36m(process_task pid=2080624)[0m [INFO][successive_halving.py:164] Successive Halving uses budget type BUDGETS with eta 4, min budget 10, and max budget 500.[32m [repeated 3x across cluster][0m
+[36m(process_task pid=2080624)[0m [INFO][successive_halving.py:323] Number of configs in stage:[32m [repeated 3x across cluster][0m
+[36m(process_task pid=2080624)[0m [INFO][successive_halving.py:329] --- Bracket 0: [31.25, 125.0, 500.0][32m [repeated 6x across cluster][0m
+[36m(process_task pid=2080624)[0m [INFO][successive_halving.py:327] Budgets in stage:[32m [repeated 3x across cluster][0m
+[36m(process_task pid=2080713)[0m [INFO][abstract_intensifier.py:517] Added config e9cd0e as new incumbent because there are no incumbents yet.[32m [repeated 2x across cluster][0m
+[36m(process_task pid=2080616)[0m [INFO][abstract_intensifier.py:596] Added config 6c5756 and rejected config e9cd0e as incumbent because it is not better than the incumbents on 1 instances: [32m [repeated 6x across cluster][0m
+[36m(process_task pid=2080687)[0m [INFO][abstract_initial_design.py:87] Reducing the number of initial configurations from 380 to 25 (max_ratio == 0.25).[32m [repeated 2x across cluster][0m
+[36m(process_task pid=2080687)[0m [WARNING][target_function_runner.py:74] The argument instance is not set by SMAC: Consider removing it from the target function.[32m [repeated 2x across cluster][0m
+[36m(process_task pid=2080687)[0m [INFO][abstract_initial_design.py:139] Using 25 initial design configurations and 0 additional configurations.[32m [repeated 2x across cluster][0m
+[36m(process_task pid=2080595)[0m [INFO][abstract_intensifier.py:307] Using only one seed for deterministic scenario.
+[36m(process_task pid=2080595)[0m [INFO][successive_halving.py:164] Successive Halving uses budget type BUDGETS with eta 4, min budget 10, and max budget 500.
+[36m(process_task pid=2080595)[0m [INFO][successive_halving.py:323] Number of configs in stage:
+[36m(process_task pid=2080595)[0m [INFO][successive_halving.py:329] --- Bracket 0: [31.25, 125.0, 500.0][32m [repeated 2x across cluster][0m
+[36m(process_task pid=2080595)[0m [INFO][successive_halving.py:327] Budgets in stage:
+[36m(process_task pid=2080752)[0m [INFO][abstract_intensifier.py:517] Added config e9cd0e as new incumbent because there are no incumbents yet.[32m [repeated 2x across cluster][0m
+[36m(process_task pid=2080571)[0m [INFO][abstract_intensifier.py:596] Added config 19528c and rejected config 6c5756 as incumbent because it is not better than the incumbents on 1 instances: [32m [repeated 4x across cluster][0m
+[36m(process_task pid=2080687)[0m [INFO][abstract_intensifier.py:307] Using only one seed for deterministic scenario.
+[36m(process_task pid=2080687)[0m [INFO][successive_halving.py:164] Successive Halving uses budget type BUDGETS with eta 4, min budget 10, and max budget 500.
+[36m(process_task pid=2080687)[0m [INFO][successive_halving.py:323] Number of configs in stage:
+[36m(process_task pid=2080687)[0m [INFO][successive_halving.py:327] Budgets in stage:
+[36m(process_task pid=608010, ip=129.21.37.49)[0m [INFO][smbo.py:327] Finished 50 trials.
+[36m(process_task pid=2080585)[0m [INFO][abstract_initial_design.py:87] Reducing the number of initial configurations from 380 to 25 (max_ratio == 0.25).
+[36m(process_task pid=2080585)[0m [WARNING][target_function_runner.py:74] The argument instance is not set by SMAC: Consider removing it from the target function.
+[36m(process_task pid=2080585)[0m [INFO][abstract_initial_design.py:139] Using 25 initial design configurations and 0 additional configurations.
+[36m(process_task pid=2080585)[0m [INFO][successive_halving.py:329] --- Bracket 0: [31.25, 125.0, 500.0][32m [repeated 4x across cluster][0m
+[36m(process_task pid=1910847)[0m [INFO][abstract_intensifier.py:596] Added config 706823 and rejected config 1cc5a8 as incumbent because it is not better than the incumbents on 1 instances: [32m [repeated 9x across cluster][0m
+[36m(process_task pid=2080585)[0m [INFO][abstract_intensifier.py:307] Using only one seed for deterministic scenario.
+[36m(process_task pid=2080585)[0m [INFO][successive_halving.py:164] Successive Halving uses budget type BUDGETS with eta 4, min budget 10, and max budget 500.
+[36m(process_task pid=2080585)[0m [INFO][successive_halving.py:323] Number of configs in stage:
+[36m(process_task pid=2080585)[0m [INFO][successive_halving.py:327] Budgets in stage:
+[36m(process_task pid=2080691)[0m [INFO][abstract_intensifier.py:517] Added config e9cd0e as new incumbent because there are no incumbents yet.
+[36m(process_task pid=608010, ip=129.21.37.49)[0m [INFO][abstract_intensifier.py:596] Added config 1b200e and rejected config ee2d0c as incumbent because it is not better than the incumbents on 1 instances: [32m [repeated 5x across cluster][0m
+[36m(process_task pid=2080624)[0m [INFO][abstract_intensifier.py:517] Added config e9cd0e as new incumbent because there are no incumbents yet.
+[36m(process_task pid=2080585)[0m [INFO][abstract_intensifier.py:517] Added config e9cd0e as new incumbent because there are no incumbents yet.
+[36m(process_task pid=2080721)[0m [INFO][abstract_intensifier.py:596] Added config 706823 and rejected config 84ec8e as incumbent because it is not better than the incumbents on 1 instances: [32m [repeated 2x across cluster][0m
+[36m(process_task pid=2080638)[0m [INFO][abstract_intensifier.py:596] Added config 19528c and rejected config 6c5756 as incumbent because it is not better than the incumbents on 1 instances: [32m [repeated 8x across cluster][0m
+[36m(process_task pid=2327746, ip=129.21.30.37)[0m [INFO][smbo.py:327] Finished 50 trials.
+[36m(process_task pid=608010, ip=129.21.37.49)[0m [INFO][smbo.py:335] Configuration budget is exhausted:
+[36m(process_task pid=608010, ip=129.21.37.49)[0m [INFO][smbo.py:336] --- Remaining wallclock time: 4.797803640365601
+[36m(process_task pid=608010, ip=129.21.37.49)[0m [INFO][smbo.py:337] --- Remaining cpu time: inf
+[36m(process_task pid=608010, ip=129.21.37.49)[0m [INFO][smbo.py:338] --- Remaining trials: 0
+[36m(process_task pid=608010, ip=129.21.37.49)[0m Starting prediction
+[36m(process_task pid=2080751)[0m [INFO][abstract_intensifier.py:596] Added config 210c3a and rejected config 38aec9 as incumbent because it is not better than the incumbents on 1 instances: [32m [repeated 2x across cluster][0m
+[36m(process_task pid=608010, ip=129.21.37.49)[0m Test accuracy:  0.7933333333333333
+[36m(process_task pid=2080655)[0m [INFO][abstract_intensifier.py:517] Added config e9cd0e as new incumbent because there are no incumbents yet.
+[36m(process_task pid=608010, ip=129.21.37.49)[0m [INFO][smbo.py:327] Finished 100 trials.
+[36m(process_task pid=2327736, ip=129.21.30.37)[0m [INFO][smbo.py:327] Finished 50 trials.
+[36m(process_task pid=608012, ip=129.21.37.49)[0m [INFO][smbo.py:335] Configuration budget is exhausted:
+[36m(process_task pid=608012, ip=129.21.37.49)[0m [INFO][smbo.py:336] --- Remaining wallclock time: -0.06838369369506836
+[36m(process_task pid=608012, ip=129.21.37.49)[0m [INFO][smbo.py:337] --- Remaining cpu time: inf
+[36m(process_task pid=608012, ip=129.21.37.49)[0m [INFO][smbo.py:338] --- Remaining trials: 54
+[36m(process_task pid=608012, ip=129.21.37.49)[0m Starting prediction
+[36m(process_task pid=2080678)[0m [INFO][abstract_intensifier.py:596] Added config 3497f9 and rejected config 6d1d82 as incumbent because it is not better than the incumbents on 1 instances: [32m [repeated 6x across cluster][0m
+[36m(process_task pid=2327746, ip=129.21.30.37)[0m [INFO][smbo.py:335] Configuration budget is exhausted:
+[36m(process_task pid=2327746, ip=129.21.30.37)[0m [INFO][smbo.py:336] --- Remaining wallclock time: -0.0687265396118164
+[36m(process_task pid=2327746, ip=129.21.30.37)[0m [INFO][smbo.py:337] --- Remaining cpu time: inf
+[36m(process_task pid=2327746, ip=129.21.30.37)[0m [INFO][smbo.py:338] --- Remaining trials: 40
+[36m(process_task pid=2327746, ip=129.21.30.37)[0m Starting prediction
+[36m(process_task pid=608012, ip=129.21.37.49)[0m Test accuracy:  0.9913294797687862
+[36m(process_task pid=2080662)[0m [INFO][abstract_intensifier.py:596] Added config 6c5756 and rejected config 836046 as incumbent because it is not better than the incumbents on 1 instances: [32m [repeated 2x across cluster][0m
+[36m(process_task pid=2080616)[0m [INFO][smbo.py:335] Configuration budget is exhausted:[32m [repeated 6x across cluster][0m
+[36m(process_task pid=2080616)[0m [INFO][smbo.py:336] --- Remaining wallclock time: -0.42354249954223633[32m [repeated 6x across cluster][0m
+[36m(process_task pid=2080616)[0m [INFO][smbo.py:337] --- Remaining cpu time: inf[32m [repeated 6x across cluster][0m
+[36m(process_task pid=2080616)[0m [INFO][smbo.py:338] --- Remaining trials: 94[32m [repeated 6x across cluster][0m
+[36m(process_task pid=2080616)[0m Starting prediction[32m [repeated 6x across cluster][0m
+[36m(process_task pid=2080678)[0m Test accuracy:  0.8787878787878788[32m [repeated 4x across cluster][0m
+[36m(process_task pid=2080687)[0m [INFO][abstract_intensifier.py:517] Added config e9cd0e as new incumbent because there are no incumbents yet.
+[36m(process_task pid=2080751)[0m [INFO][abstract_intensifier.py:596] Added config 6d1d82 and rejected config 84ec8e as incumbent because it is not better than the incumbents on 1 instances: 
+[36m(process_task pid=2080721)[0m [INFO][abstract_intensifier.py:596] Added config 706823 and rejected config d2c140 as incumbent because it is not better than the incumbents on 1 instances: 
+[36m(process_task pid=2080735)[0m [INFO][smbo.py:335] Configuration budget is exhausted:[32m [repeated 4x across cluster][0m
+[36m(process_task pid=2080735)[0m [INFO][smbo.py:336] --- Remaining wallclock time: -3.4473369121551514[32m [repeated 4x across cluster][0m
+[36m(process_task pid=2080735)[0m [INFO][smbo.py:337] --- Remaining cpu time: inf[32m [repeated 4x across cluster][0m
+[36m(process_task pid=2080735)[0m [INFO][smbo.py:338] --- Remaining trials: 96[32m [repeated 4x across cluster][0m
+[36m(process_task pid=2080735)[0m Starting prediction[32m [repeated 4x across cluster][0m
+[36m(process_task pid=2080751)[0m Test accuracy:  0.945[32m [repeated 3x across cluster][0m
+[36m(process_task pid=2080638)[0m [INFO][smbo.py:335] Configuration budget is exhausted:[32m [repeated 3x across cluster][0m
+[36m(process_task pid=2080638)[0m [INFO][smbo.py:336] --- Remaining wallclock time: -14.240947961807251[32m [repeated 3x across cluster][0m
+[36m(process_task pid=2080638)[0m [INFO][smbo.py:337] --- Remaining cpu time: inf[32m [repeated 3x across cluster][0m
+[36m(process_task pid=2080638)[0m [INFO][smbo.py:338] --- Remaining trials: 93[32m [repeated 3x across cluster][0m
+[36m(process_task pid=2080593)[0m Starting prediction[32m [repeated 2x across cluster][0m
+[36m(process_task pid=2080721)[0m Test accuracy:  0.99375
+[36m(process_task pid=2080624)[0m [INFO][abstract_intensifier.py:596] Added config 6c5756 and rejected config e9cd0e as incumbent because it is not better than the incumbents on 1 instances: 
+[36m(process_task pid=2080675)[0m [INFO][smbo.py:335] Configuration budget is exhausted:
+[36m(process_task pid=2080675)[0m [INFO][smbo.py:336] --- Remaining wallclock time: -16.76755976676941
+[36m(process_task pid=2080675)[0m [INFO][smbo.py:337] --- Remaining cpu time: inf
+[36m(process_task pid=2080675)[0m [INFO][smbo.py:338] --- Remaining trials: 93
+[36m(process_task pid=2080675)[0m Starting prediction[32m [repeated 2x across cluster][0m
+[36m(process_task pid=2080624)[0m [INFO][smbo.py:335] Configuration budget is exhausted:
+[36m(process_task pid=2080624)[0m [INFO][smbo.py:336] --- Remaining wallclock time: -11.370052576065063
+[36m(process_task pid=2080624)[0m [INFO][smbo.py:337] --- Remaining cpu time: inf
+[36m(process_task pid=2080624)[0m [INFO][smbo.py:338] --- Remaining trials: 98
+[36m(process_task pid=1910847)[0m Test accuracy:  0.8293838862559242
+[36m(process_task pid=2080655)[0m [INFO][abstract_intensifier.py:596] Added config 6c5756 and rejected config e9cd0e as incumbent because it is not better than the incumbents on 1 instances: [32m [repeated 2x across cluster][0m
+[36m(process_task pid=2080655)[0m Starting prediction[32m [repeated 4x across cluster][0m
+[36m(process_task pid=2080571)[0m Test accuracy:  0.9346341463414635
+[36m(process_task pid=2080691)[0m [INFO][smbo.py:335] Configuration budget is exhausted:[32m [repeated 4x across cluster][0m
+[36m(process_task pid=2080691)[0m [INFO][smbo.py:336] --- Remaining wallclock time: -20.105920791625977[32m [repeated 4x across cluster][0m
+[36m(process_task pid=2080691)[0m [INFO][smbo.py:337] --- Remaining cpu time: inf[32m [repeated 4x across cluster][0m
+[36m(process_task pid=2080691)[0m [INFO][smbo.py:338] --- Remaining trials: 97[32m [repeated 4x across cluster][0m
+[36m(process_task pid=2080705)[0m Starting prediction[32m [repeated 2x across cluster][0m
+[36m(process_task pid=2080631)[0m [INFO][smbo.py:335] Configuration budget is exhausted:[32m [repeated 2x across cluster][0m
+[36m(process_task pid=2080631)[0m [INFO][smbo.py:336] --- Remaining wallclock time: -31.62838315963745[32m [repeated 2x across cluster][0m
+[36m(process_task pid=2080631)[0m [INFO][smbo.py:337] --- Remaining cpu time: inf[32m [repeated 2x across cluster][0m
+[36m(process_task pid=2080631)[0m [INFO][smbo.py:338] --- Remaining trials: 98[32m [repeated 2x across cluster][0m
+[36m(process_task pid=2080631)[0m Test accuracy:  0.6445086705202312
+[36m(process_task pid=2080631)[0m Starting prediction
+[36m(process_task pid=2080753)[0m [INFO][smbo.py:335] Configuration budget is exhausted:
+[36m(process_task pid=2080753)[0m [INFO][smbo.py:336] --- Remaining wallclock time: -53.48474836349487
+[36m(process_task pid=2080753)[0m [INFO][smbo.py:337] --- Remaining cpu time: inf
+[36m(process_task pid=2080753)[0m [INFO][smbo.py:338] --- Remaining trials: 93
+[36m(process_task pid=2080675)[0m Test accuracy:  0.8322177599286033[32m [repeated 2x across cluster][0m
+[36m(process_task pid=2080753)[0m Starting prediction
+[36m(process_task pid=2080609)[0m [INFO][smbo.py:335] Configuration budget is exhausted:
+[36m(process_task pid=2080609)[0m [INFO][smbo.py:336] --- Remaining wallclock time: -55.347694396972656
+[36m(process_task pid=2080609)[0m [INFO][smbo.py:337] --- Remaining cpu time: inf
+[36m(process_task pid=2080609)[0m [INFO][smbo.py:338] --- Remaining trials: 95
+[36m(process_task pid=2080743)[0m Test accuracy:  0.7788632326820604[32m [repeated 2x across cluster][0m
+[36m(process_task pid=2080609)[0m Starting prediction
+[36m(process_task pid=2080691)[0m Test accuracy:  0.37849425484479504
+[36m(process_task pid=2080638)[0m Test accuracy:  0.9453768690875801
+[36m(process_task pid=2080705)[0m Test accuracy:  0.9022448302554462[32m [repeated 2x across cluster][0m
+[36m(process_task pid=2080595)[0m [INFO][abstract_intensifier.py:517] Added config e9cd0e as new incumbent because there are no incumbents yet.
+[36m(process_task pid=2080735)[0m Test accuracy:  0.6632330443651199
+[36m(process_task pid=2080595)[0m [INFO][smbo.py:335] Configuration budget is exhausted:
+[36m(process_task pid=2080595)[0m [INFO][smbo.py:336] --- Remaining wallclock time: -114.50749397277832
+[36m(process_task pid=2080595)[0m [INFO][smbo.py:337] --- Remaining cpu time: inf
+[36m(process_task pid=2080595)[0m [INFO][smbo.py:338] --- Remaining trials: 99
+[36m(process_task pid=2080595)[0m Starting prediction
+[36m(process_task pid=2080655)[0m Test accuracy:  0.2816717791411043
+[36m(process_task pid=2080595)[0m Test accuracy:  0.325[32m [repeated 2x across cluster][0m
+[36m(process_task pid=2080752)[0m [INFO][smbo.py:335] Configuration budget is exhausted:
+[36m(process_task pid=2080752)[0m [INFO][smbo.py:336] --- Remaining wallclock time: -155.392076253891
+[36m(process_task pid=2080752)[0m [INFO][smbo.py:337] --- Remaining cpu time: inf
+[36m(process_task pid=2080752)[0m [INFO][smbo.py:338] --- Remaining trials: 98
+[36m(process_task pid=2080752)[0m Starting prediction
+[36m(process_task pid=2080752)[0m Test accuracy:  0.7260147601476015
+[36m(process_task pid=2080713)[0m Test accuracy:  0.6638203857407297[32m [repeated 2x across cluster][0m
+[36m(process_task pid=2080672)[0m [INFO][abstract_intensifier.py:596] Added config 6c5756 and rejected config e9cd0e as incumbent because it is not better than the incumbents on 1 instances: 
+[36m(process_task pid=2080672)[0m [INFO][smbo.py:335] Configuration budget is exhausted:
+[36m(process_task pid=2080672)[0m [INFO][smbo.py:336] --- Remaining wallclock time: -472.7631676197052
+[36m(process_task pid=2080672)[0m [INFO][smbo.py:337] --- Remaining cpu time: inf
+[36m(process_task pid=2080672)[0m [INFO][smbo.py:338] --- Remaining trials: 98
+[36m(process_task pid=2080672)[0m Starting prediction
+[36m(process_task pid=2080687)[0m [INFO][abstract_intensifier.py:596] Added config 6c5756 and rejected config e9cd0e as incumbent because it is not better than the incumbents on 1 instances: 
+[36m(process_task pid=2080687)[0m [INFO][smbo.py:335] Configuration budget is exhausted:
+[36m(process_task pid=2080687)[0m [INFO][smbo.py:336] --- Remaining wallclock time: -549.9104685783386
+[36m(process_task pid=2080687)[0m [INFO][smbo.py:337] --- Remaining cpu time: inf
+[36m(process_task pid=2080687)[0m [INFO][smbo.py:338] --- Remaining trials: 98
+[36m(process_task pid=2080687)[0m Starting prediction
+[36m(process_task pid=2080585)[0m [INFO][smbo.py:335] Configuration budget is exhausted:
+[36m(process_task pid=2080585)[0m [INFO][smbo.py:336] --- Remaining wallclock time: -678.0151114463806
+[36m(process_task pid=2080585)[0m [INFO][smbo.py:337] --- Remaining cpu time: inf
+[36m(process_task pid=2080585)[0m [INFO][smbo.py:338] --- Remaining trials: 98
+[36m(process_task pid=2080585)[0m Starting prediction
+[36m(process_task pid=2080585)[0m Test accuracy:  0.61225
+[36m(process_task pid=2080672)[0m Test accuracy:  0.9909868421052631
+[36m(process_task pid=2080595)[0m   warnings.warn(
+[36m(process_task pid=2080687)[0m Test accuracy:  0.996
