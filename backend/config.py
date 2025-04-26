@@ -7,6 +7,7 @@ class Config:
        self.path = pathlib.Path(__file__).resolve().parents[1]
        self.config["train_path"] = str(self.path) + "/" + "data" + "/" + "train"
        self.config["test_path"] = str(self.path) + "/" + "data" + "/" + "test"
+       self.config["results_path"] = str(self.path) + "/" + "results"
 
     def get_openml_api_key(self):
         return self.config["openml_api_key"]
@@ -25,3 +26,6 @@ class Config:
     
     def get_test_path(self):
         return self.config["test_path"]
+    
+    def get_results_path(self):
+        return self.config["results_path"]
