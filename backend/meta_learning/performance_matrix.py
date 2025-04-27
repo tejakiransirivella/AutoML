@@ -17,22 +17,19 @@ from backend.pipelines.BuildConfigurations import BuildConfigurations
 
 class ConfigurationCell:
 
-    def __init__(self, config, dataset_id:int=None, row:int=None, col:int=None):
+    def __init__(self, config, dataset_id:int=None, row:int=None, col:int=None,val_score:float=None):
         self.config = config
         self.dataset_id = dataset_id
-        self.val_score = 0
+        self.val_score = val_score
         self.row = row
         self.col = col
 
-class PerformaceMatrix:
+class PerformanceMatrix:
 
     def __init__(self, best_candidates_path, data_path:str=None, performance_matrix_path:str=None):
         self.best_candidates_path = best_candidates_path
         self.data_path = data_path
         self.performace_matrix_path = performance_matrix_path
-        self.pipeline_registry:PipelineRegistry = PipelineRegistry()
-        self.build_configurations = BuildConfigurations(self.pipeline_registry)
-        self.configspace = self.build_configurations.build_configurations()
     
     def load_configurations(self):
         configurations = []
@@ -61,7 +58,6 @@ class PerformaceMatrix:
                 f,indent=4, default=str) 
             
     
-    
     @staticmethod
     @ray.remote
     def process_task(task,config_space:ConfigurationSpace,pipeline_registry:PipelineRegistry,
@@ -75,8 +71,7 @@ class PerformaceMatrix:
             X,y = autoclassifier.one_hot_encoding(X,y)
             pipeline = pipeline_registry.get_pipeline(config["algorithm"])
             accuracy = 1.0-pipeline.train(X, y, config,budget,seed)
-            configuration_cell = ConfigurationCell(config_dict, dataset_id=dataset_id, row=row, col=col)
-            configuration_cell.val_score = accuracy
+            configuration_cell = ConfigurationCell(config_dict, dataset_id=dataset_id, row=row, col=col, val_score=accuracy)
             print(f"Configuration: {config} Dataset: {dataset_id} Accuracy: {accuracy}")
 
         except Exception as e:
@@ -104,19 +99,22 @@ class PerformaceMatrix:
             configuration = configurations[i]
             for j in range(rows):
                 if i == j:
-                    performance_matrix[i][j] = ConfigurationCell(configuration, dataset_ids[j], i, j)
-                    performance_matrix[i][j].val_score = val_scores[j]
+                    performance_matrix[i][j] = ConfigurationCell(configuration, dataset_ids[j], i, j, val_scores[j])
                 else:
                     tasks.append((i,j,configuration,dataset_ids[j],data[j][0],data[j][1]))
 
         print("No of tasks: ", len(tasks))
 
-        # tasks = tasks[:2]
+        tasks = tasks[:2]
+
+        pipeline_registry:PipelineRegistry = PipelineRegistry()
+        build_configurations = BuildConfigurations(pipeline_registry)
+        configspace = build_configurations.build_configurations()
 
         futures = []
 
         for i in range(len(tasks)):
-            future = PerformaceMatrix.process_task.remote(tasks[i],self.configspace,self.pipeline_registry,budget = 300, seed = 42)
+            future = PerformanceMatrix.process_task.remote(tasks[i],configspace,pipeline_registry,budget = None, seed = 42)
             futures.append(future)
 
         for future in futures:
@@ -134,14 +132,14 @@ class PerformaceMatrix:
         print("Performance matrix shape: ", len(performance_matrix), len(performance_matrix[0]))
 
 
-        # configuration_cell:ConfigurationCell = PerformaceMatrix.process_task(tasks[34],self.configspace,self.pipeline_registry,budget = None, seed = 42)
+        # configuration_cell:ConfigurationCell = PerformanceMatrix.process_task(tasks[34],configspace,pipeline_registry,budget = None, seed = 42)
         # performance_matrix[configuration_cell.row][configuration_cell.col] = configuration_cell
-        self.write_performace_matrix(performance_matrix)
+        # self.write_performace_matrix(performance_matrix)
 
 
 def main():
     config = Config()
-    performance_matrix = PerformaceMatrix(f"{config.get_results_path()}/best_candidate_runs.json", config.get_train_path(),
+    performance_matrix = PerformanceMatrix(f"{config.get_results_path()}/best_candidate_runs.json", config.get_train_path(),
                                           f"{config.get_results_path()}/performace_matrix_runs.json")
     performance_matrix.create_performance_matrix()
 
