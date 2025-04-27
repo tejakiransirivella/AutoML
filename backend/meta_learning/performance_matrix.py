@@ -140,7 +140,7 @@ class PerformanceMatrix:
 def main():
     config = Config()
     performance_matrix = PerformanceMatrix(f"{config.get_results_path()}/best_candidate_runs.json", config.get_train_path(),
-                                          f"{config.get_results_path()}/performace_matrix_runs.json")
+                                          f"{config.get_results_path()}/performance_matrix_runs.json")
     performance_matrix.create_performance_matrix()
 
 if __name__ == "__main__":
