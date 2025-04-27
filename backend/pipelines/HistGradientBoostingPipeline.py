@@ -38,7 +38,7 @@ class HistGradientBoostingPipeline(BasePipeline):
 
        
 
-    def get_model_for_config(self, config: Configuration,budget:int,seed:int=0):
+    def get_model_for_config(self, config: Configuration,budget:int=None,seed:int=0):
     
         config = util.get_config_for_model(self.name,config)
         if config["early_stopping"] == "valid":
@@ -47,5 +47,5 @@ class HistGradientBoostingPipeline(BasePipeline):
             config["n_iter_no_change"] = 10
         elif config["early_stopping"] == "train" or config["early_stopping"] == "off":
             config["early_stopping"] = False
-        model = HistGradientBoostingClassifier(**config,max_iter=budget,random_state=seed)
+        model = HistGradientBoostingClassifier(**config,**({"max_iter": budget} if budget is not None else {}),random_state=seed)
         return model

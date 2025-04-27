@@ -21,9 +21,9 @@ class PassiveAggressivePipeline(BasePipeline):
         for param in hyperparameters:
             configspace.add(EqualsCondition(param, configspace.get("algorithm"), self.name)) 
     
-    def get_model_for_config(self, config: Configuration,budget:int, seed:int=0):
+    def get_model_for_config(self, config: Configuration,budget:int=None, seed:int=0):
         config = util.get_config_for_model(f"{self.name}",config)
-        model = PassiveAggressiveClassifier(**config,max_iter=budget, random_state=seed)
+        model = PassiveAggressiveClassifier(**config,**({"max_iter": budget} if budget is not None else {}), random_state=seed)
         return model
 
 

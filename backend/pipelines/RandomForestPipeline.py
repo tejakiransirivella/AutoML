@@ -23,7 +23,7 @@ class RandomForestPipeline(BasePipeline):
           for param in hyperparameters:
                configspace.add(EqualsCondition(param, configspace.get("algorithm"), self.name)) 
 
-     def get_model_for_config(self, config: Configuration,budget:int,seed:int=0):
+     def get_model_for_config(self, config: Configuration,budget:int=None,seed:int=0):
           config = util.get_config_for_model(self.name,config)
-          model = RandomForestClassifier(**config,n_estimators=budget, random_state=seed)
+          model = RandomForestClassifier(**config,**({"n_estimators": budget} if budget is not None else {}), random_state=seed)
           return model 
