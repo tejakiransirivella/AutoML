@@ -1,0 +1,217 @@
+{
+    "portfolio": [
+        {
+            "algorithm": "HistGradientBoosting",
+            "HistGradientBoosting.early_stopping": "off",
+            "HistGradientBoosting.l2_regularization": 0.0006813999866,
+            "HistGradientBoosting.learning_rate": 0.2168809542892,
+            "HistGradientBoosting.max_leaf_nodes": 585,
+            "HistGradientBoosting.min_samples_leaf": 4
+        },
+        {
+            "algorithm": "HistGradientBoosting",
+            "HistGradientBoosting.early_stopping": "off",
+            "HistGradientBoosting.l2_regularization": 4.05231546e-05,
+            "HistGradientBoosting.learning_rate": 0.0963078286571,
+            "HistGradientBoosting.max_leaf_nodes": 28,
+            "HistGradientBoosting.min_samples_leaf": 11
+        },
+        {
+            "algorithm": "HistGradientBoosting",
+            "HistGradientBoosting.early_stopping": "valid",
+            "HistGradientBoosting.l2_regularization": 4.1805655e-06,
+            "HistGradientBoosting.learning_rate": 0.1149187858658,
+            "HistGradientBoosting.max_leaf_nodes": 127,
+            "HistGradientBoosting.min_samples_leaf": 9,
+            "HistGradientBoosting.n_iter_no_change": 12,
+            "HistGradientBoosting.validation_fraction": 0.2614516200779
+        },
+        {
+            "algorithm": "HistGradientBoosting",
+            "HistGradientBoosting.early_stopping": "train",
+            "HistGradientBoosting.l2_regularization": 7.836e-10,
+            "HistGradientBoosting.learning_rate": 0.0842589828977,
+            "HistGradientBoosting.max_leaf_nodes": 5,
+            "HistGradientBoosting.min_samples_leaf": 2,
+            "HistGradientBoosting.n_iter_no_change": 5
+        },
+        {
+            "algorithm": "RandomForest",
+            "RandomForest.bootstrap": true,
+            "RandomForest.criterion": "entropy",
+            "RandomForest.max_features": 0.4417442102449,
+            "RandomForest.min_samples_leaf": 5,
+            "RandomForest.min_samples_split": 6
+        },
+        {
+            "algorithm": "HistGradientBoosting",
+            "HistGradientBoosting.early_stopping": "valid",
+            "HistGradientBoosting.l2_regularization": 0.032152620191,
+            "HistGradientBoosting.learning_rate": 0.031883397351,
+            "HistGradientBoosting.max_leaf_nodes": 13,
+            "HistGradientBoosting.min_samples_leaf": 10,
+            "HistGradientBoosting.n_iter_no_change": 12,
+            "HistGradientBoosting.validation_fraction": 0.1
+        },
+        {
+            "algorithm": "HistGradientBoosting",
+            "HistGradientBoosting.early_stopping": "valid",
+            "HistGradientBoosting.l2_regularization": 1.2720741e-05,
+            "HistGradientBoosting.learning_rate": 0.0301480399847,
+            "HistGradientBoosting.max_leaf_nodes": 9,
+            "HistGradientBoosting.min_samples_leaf": 3,
+            "HistGradientBoosting.n_iter_no_change": 15,
+            "HistGradientBoosting.validation_fraction": 0.2919189249075
+        },
+        {
+            "algorithm": "ExtraTrees",
+            "ExtraTrees.bootstrap": false,
+            "ExtraTrees.criterion": "entropy",
+            "ExtraTrees.max_features": 0.3569403789912,
+            "ExtraTrees.min_samples_leaf": 4,
+            "ExtraTrees.min_samples_split": 4
+        },
+        {
+            "algorithm": "HistGradientBoosting",
+            "HistGradientBoosting.early_stopping": "off",
+            "HistGradientBoosting.l2_regularization": 6.4315868e-06,
+            "HistGradientBoosting.learning_rate": 0.1049764757533,
+            "HistGradientBoosting.max_leaf_nodes": 18,
+            "HistGradientBoosting.min_samples_leaf": 15
+        },
+        {
+            "algorithm": "HistGradientBoosting",
+            "HistGradientBoosting.early_stopping": "train",
+            "HistGradientBoosting.l2_regularization": 0.2270133854455,
+            "HistGradientBoosting.learning_rate": 0.252214887441,
+            "HistGradientBoosting.max_leaf_nodes": 412,
+            "HistGradientBoosting.min_samples_leaf": 77,
+            "HistGradientBoosting.n_iter_no_change": 15
+        },
+        {
+            "algorithm": "MLP",
+            "MLP.activation": "relu",
+            "MLP.alpha": 8.32631655e-05,
+            "MLP.early_stopping": "train",
+            "MLP.hidden_layer_depth": 2,
+            "MLP.learning_rate_init": 0.0005231346982,
+            "MLP.num_nodes_per_layer": 170
+        },
+        {
+            "algorithm": "RandomForest",
+            "RandomForest.bootstrap": false,
+            "RandomForest.criterion": "entropy",
+            "RandomForest.max_features": 0.1623160917581,
+            "RandomForest.min_samples_leaf": 4,
+            "RandomForest.min_samples_split": 7
+        },
+        {
+            "algorithm": "HistGradientBoosting",
+            "HistGradientBoosting.early_stopping": "off",
+            "HistGradientBoosting.l2_regularization": 0.0776427938158,
+            "HistGradientBoosting.learning_rate": 0.0394241992266,
+            "HistGradientBoosting.max_leaf_nodes": 38,
+            "HistGradientBoosting.min_samples_leaf": 5
+        },
+        {
+            "algorithm": "HistGradientBoosting",
+            "HistGradientBoosting.early_stopping": "off",
+            "HistGradientBoosting.l2_regularization": 1.5022e-09,
+            "HistGradientBoosting.learning_rate": 0.1368482206677,
+            "HistGradientBoosting.max_leaf_nodes": 763,
+            "HistGradientBoosting.min_samples_leaf": 51
+        },
+        {
+            "algorithm": "RandomForest",
+            "RandomForest.bootstrap": false,
+            "RandomForest.criterion": "entropy",
+            "RandomForest.max_features": 0.1669879927342,
+            "RandomForest.min_samples_leaf": 2,
+            "RandomForest.min_samples_split": 18
+        },
+        {
+            "algorithm": "MLP",
+            "MLP.activation": "relu",
+            "MLP.alpha": 7.62429006e-05,
+            "MLP.early_stopping": "train",
+            "MLP.hidden_layer_depth": 2,
+            "MLP.learning_rate_init": 0.0003962264763,
+            "MLP.num_nodes_per_layer": 120
+        },
+        {
+            "algorithm": "HistGradientBoosting",
+            "HistGradientBoosting.early_stopping": "valid",
+            "HistGradientBoosting.l2_regularization": 2.149059e-06,
+            "HistGradientBoosting.learning_rate": 0.1155209684212,
+            "HistGradientBoosting.max_leaf_nodes": 100,
+            "HistGradientBoosting.min_samples_leaf": 8,
+            "HistGradientBoosting.n_iter_no_change": 6,
+            "HistGradientBoosting.validation_fraction": 0.2055809101152
+        },
+        {
+            "algorithm": "RandomForest",
+            "RandomForest.bootstrap": true,
+            "RandomForest.criterion": "gini",
+            "RandomForest.max_features": 0.929064727642,
+            "RandomForest.min_samples_leaf": 1,
+            "RandomForest.min_samples_split": 3
+        },
+        {
+            "algorithm": "ExtraTrees",
+            "ExtraTrees.bootstrap": true,
+            "ExtraTrees.criterion": "gini",
+            "ExtraTrees.max_features": 0.9483946779711,
+            "ExtraTrees.min_samples_leaf": 13,
+            "ExtraTrees.min_samples_split": 5
+        },
+        {
+            "algorithm": "MLP",
+            "MLP.activation": "relu",
+            "MLP.alpha": 6.631872e-07,
+            "MLP.early_stopping": "train",
+            "MLP.hidden_layer_depth": 1,
+            "MLP.learning_rate_init": 0.0085733339865,
+            "MLP.num_nodes_per_layer": 166
+        },
+        {
+            "algorithm": "RandomForest",
+            "RandomForest.bootstrap": true,
+            "RandomForest.criterion": "gini",
+            "RandomForest.max_features": 0.4408854976899,
+            "RandomForest.min_samples_leaf": 4,
+            "RandomForest.min_samples_split": 20
+        },
+        {
+            "algorithm": "RandomForest",
+            "RandomForest.bootstrap": true,
+            "RandomForest.criterion": "entropy",
+            "RandomForest.max_features": 0.6809125388311,
+            "RandomForest.min_samples_leaf": 2,
+            "RandomForest.min_samples_split": 13
+        },
+        {
+            "algorithm": "ExtraTrees",
+            "ExtraTrees.bootstrap": false,
+            "ExtraTrees.criterion": "gini",
+            "ExtraTrees.max_features": 0.53773237377,
+            "ExtraTrees.min_samples_leaf": 1,
+            "ExtraTrees.min_samples_split": 2
+        },
+        {
+            "algorithm": "RandomForest",
+            "RandomForest.bootstrap": true,
+            "RandomForest.criterion": "entropy",
+            "RandomForest.max_features": 0.5825812445403,
+            "RandomForest.min_samples_leaf": 7,
+            "RandomForest.min_samples_split": 8
+        },
+        {
+            "algorithm": "RandomForest",
+            "RandomForest.bootstrap": true,
+            "RandomForest.criterion": "entropy",
+            "RandomForest.max_features": 0.6707127227026,
+            "RandomForest.min_samples_leaf": 1,
+            "RandomForest.min_samples_split": 20
+        }
+    ]
+}
