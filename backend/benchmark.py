@@ -32,7 +32,7 @@ class Benchmark(Preprocess,CandidatePipeline):
 
 def main():
     config = Config()
-    benchmark = Benchmark("framework_benchmark_results.json", config.get_test_path())
+    benchmark = Benchmark(f"{config.get_results_path()}/framework_benchmark_runs_with_meta_learning.json", config.get_test_path())
     # benchmark.collect_datasets()
     benchmark.collect_dataset_ids()
     benchmark.find_best_candidate()

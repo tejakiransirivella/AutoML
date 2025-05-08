@@ -134,7 +134,10 @@ def test():
     #     for feature in dataset.features.values():
     #         features_types.add(feature.data_type)
     # print(features_types)
-    dataset = openml.datasets.get_dataset(41147)
+    dataset = openml.datasets.get_dataset(1067)
+    preprocess  = Preprocess(config.get_test_path())
+    preprocess.preprocess_dataset(dataset)
+
     # print( dataset.qualities["PercentageOfMissingValues"] > 0)
     # X = preprocess.load_dataset(41147)
     # X.replace(['NaN', 'nan', 'null', 'None', 'missing', ''], np.nan, inplace=True)

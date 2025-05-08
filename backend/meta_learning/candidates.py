@@ -90,7 +90,7 @@ class CandidatePipeline:
 
 def main():
     config = Config()
-    candidate = CandidatePipeline("best_candidate_runs.json", config.get_train_path())
+    candidate = CandidatePipeline(f"{config.get_results_path()}/best_candidate_runs.json", config.get_train_path())
     candidate.collect_dataset_ids()
     candidate.find_best_candidate()
     # print("Dataset ids: ", candidate.dataset_ids)

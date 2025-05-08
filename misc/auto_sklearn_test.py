@@ -19,14 +19,14 @@ target = openml.datasets.get_dataset(1067).default_target_attribute
 y = df[target]
 X = df.drop(columns=[target])
 
-print(y.head())
-X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42)
+# print(y.head())
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2,random_state=42)
 
 # Fit Auto-sklearn
 automl = autosklearn.classification.AutoSklearnClassifier(
-    time_left_for_this_task=60,  # Total time in seconds
+    time_left_for_this_task=600,  # Total time in seconds
     seed=42,
-    memory_limit=None
+    memory_limit=6144
 )
 
 
@@ -44,10 +44,10 @@ y_pred = automl.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print("Accuracy:", accuracy)
 
-# Print best configuration
-print("\nBest Configuration:")
-print(best_config)
-# print(automl.show_models())
+# # Print best configuration
+# print("\nBest Configuration:")
+# print(best_config)
+# # print(automl.show_models())
 
 # Loss value (e.g., 1 - accuracy)
-print("\nLoss of best model:", 1 - accuracy)
+# print("\nLoss of best model:", 1 - accuracy)

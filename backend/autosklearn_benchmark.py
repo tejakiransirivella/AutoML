@@ -29,11 +29,11 @@ class AutosklearnBenchmark(Preprocess):
             json.dump({"best_candidates":[run.__dict__ for run in best_candidate_runs]},f,indent=4, default=str)
             
     @staticmethod
-    @ray.remote
+    @ray.remote(memory = 30*1024*1024*1024)
     def process_task(task):
         best_candidate_run = None
         autoclassifier = AutoSklearnClassifier(
-                        time_left_for_this_task=3600,
+                        time_left_for_this_task=600,
                         seed=42,
                         memory_limit=None
                     )
@@ -91,7 +91,7 @@ class AutosklearnBenchmark(Preprocess):
     
 def main():
     config = Config()
-    benchmark = AutosklearnBenchmark("autosklearn_benchmark_runs.json", config.get_test_path())
+    benchmark = AutosklearnBenchmark(f"{config.get_results_path()}/autosklearn_benchmark_runs.json", config.get_test_path())
     # benchmark.collect_datasets()
     benchmark.collect_dataset_ids()
     benchmark.find_best_candidate()
