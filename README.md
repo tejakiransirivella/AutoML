@@ -7,13 +7,43 @@ An AutoML framework for classical machine learning algorithms, automating model 
 - 🧠 **Meta-Learning with Portfolio Construction**: Warm-starts the optimization using a greedy portfolio of configurations collected across datasets.
 - ⚖️ **Multi-Fidelity Evaluation**: Uses Successive Halving to allocate more resources to promising candidates and reduce evaluation cost.
 - ⚙️ **Focus on Classical ML Models**: Supports a curated set of efficient, non-deep-learning models — including Random Forests, Extra Trees, MLP, Stochastic Gradient Descent, Passive Aggressive, and Histogram-based Gradient Boosting.
-- 🖧 **Parallelized Meta-Learning and Benchmarking with Ray**: Ray is used to parallelize large-scale evaluation of configurations across datasets — both during portfolio construction (meta-learning) and during benchmarking runs — significantly speeding up experimentation.
-- 🤝 **Competitive Benchmarking**: Evaluated against Auto-sklearn 2.0 and achieves comparable accuracy across test datasets.
+- 🖧 **Parallelized Meta-Learning and Benchmarking with Ray**: Ray is used to parallelize large-scale evaluation of configurations across datasets both during portfolio construction (meta-learning) and during benchmarking runs significantly speeding up experimentation.
+- 🤝 **Competitive Benchmarking**: Evaluated against Auto-sklearn 2.0 and achieves competitive accuracy across test datasets.
+
+## ⚙️ Ray Cluster Setup & Dashboard Access
+
+This project uses [Ray](https://docs.ray.io/) to parallelize configuration evaluations during meta-learning and benchmarking. 
+
+To simplify setup, a `scripts/start_cluster.sh` script is provided to automatically:
+- Start a Ray head node
+- Connect and start Ray worker nodes via SSH
+- Activate virtual environments and configure `PYTHONPATH` on all nodes
+
+📌 Before running the script, ensure passwordless SSH access from the head node to all worker nodes.
+
+📌 You must customize the `VENV_PATH`, `PROJECT_PATH`, `HEAD_IP`, and `WORKER_NODES` variables in the script based on your system and cluster configuration.
+
+### 🔐 SSH Setup (One-Time)
+
+On the head node:
+```bash
+ssh-keygen                         # Press Enter to accept default
+ssh-copy-id username@<worker_ip>   # Repeat for each worker IP
+```
+
+Once started, the Ray dashboard is available at:
+``` bash
+http://<HEAD_IP>:8265
+```
 
 ## **▶️Running the Project**
 
 ### **Requirements**:
-    The `requirements.txt` file contains all the necessary Python dependencies for the project. Place any additional required dependencies here.
+The `requirements.txt` file contains all the necessary Python dependencies for the project. Place any additional required dependencies here. You can install them using:
+``` bash
+    pip install -r requirements.txt
+```
+
 
 To use the AutoML framework on your own dataset:
 
@@ -83,7 +113,7 @@ The framework was evaluated on benchmark datasets from OpenML under a strict 10-
 
 ### 🔍 Meta-Learning Impact
 - On **~80% of datasets**, meta-learning either improved test accuracy or matched baseline performance (within 1% difference).
-- This highlights that portfolio-based initialization is especially effective under tight budget constraints.
+- This demonstrates that portfolio-based initialization is especially effective under tight budget constraints.
 
 ### 🆚 Comparison with Auto-sklearn 2.0
 - The framework **outperformed Auto-sklearn on ~50% of the datasets**.
