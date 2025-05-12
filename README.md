@@ -1,5 +1,5 @@
 # **Classical-AutoML**
-An AutoML framework for classical machine learning algorithms, automating model selection and hyperparameter tuning through Bayesian optimization, portfolio-based meta-learning, and multi-fidelity evaluation.
+An AutoML framework for classical machine learning algorithms, automating model selection and hyperparameter tuning through Bayesian optimization, portfolio-based meta-learning, and multi-fidelity evaluation using Successive Halving.
 
 ## **🚀Highlights**
 
