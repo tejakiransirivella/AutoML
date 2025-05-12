@@ -126,3 +126,11 @@ The framework was evaluated on benchmark datasets from OpenML under a strict 10-
 - Experiments parallelized using **Ray** across 7 machines (164 CPUs)
 
 📄 **[Read the full report](./report/automl_report.pdf)** for methodology, configuration details, and accuracy plots.
+
+## 🎥 Demo 
+
+Watch the project in action! Check out the demo video:
+  
+[![Classical-AutoML Demo](https://img.youtube.com/vi/QpYgTxaxW3A/0.jpg)](https://youtu.be/QpYgTxaxW3A)  
+
+Click the image or [this link](https://youtu.be/QpYgTxaxW3A) to watch the demo.
